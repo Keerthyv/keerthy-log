@@ -1,0 +1,20 @@
+#correct {
+    display: none;
+    background-color: green;
+}
+
+#incorrect {
+    display: none;
+}
+
+.green {
+    background-color: green;
+}
+
+.yellow {
+    background-color: yellow;
+}
+
+.grey {
+    background-color: grey;
+}
