@@ -20,6 +20,7 @@ function submitWord(event) {
   console.log(userInputWord);
   checkAttempts(counter, userInputWord);
   counter--;
+  inputForm.reset();
 }
 
 function checkAttempts(counter, userInputWord) {
@@ -29,7 +30,7 @@ function checkAttempts(counter, userInputWord) {
         displayClues(userInputWord, counter);
     }
     else {
-        document.getElementById("numberOfAttempts").innerHTML = "You have no attempts left!";
+        document.getElementById("numberOfAttempts").innerHTML = `You have no attempts left! Today's word was ${wordleWord}`;
     }
 }
 function validateWord(userInputWord) {
@@ -58,8 +59,7 @@ function displayClues(userInputWord, counter) {
         else if (!(wordleWord.includes(word[i]))) {
             console.log("The letter is not in the word");
             displayLetterWithColor(currentLetter, rowId, "grey");  
-        }
-        
+        } 
     }
 
 }
@@ -68,5 +68,6 @@ function displayLetterWithColor(letter, rowId, color) {
     console.log(letter);
     var letterElement = document.createElement("td");
     letterElement.innerHTML = `<span class=${color}> ${letter} </span>`;
-    document.getElementById(rowId).appendChild(letterElement);   
+    document.getElementById(rowId).appendChild(letterElement);
+    letterElement.classList.toggle(color);
 }

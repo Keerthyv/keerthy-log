@@ -1,3 +1,9 @@
+body {
+}
+
+
+
+
 #correct {
     display: none;
     background-color: green;
@@ -18,3 +24,15 @@
 .grey {
     background-color: grey;
 }
+
+td {
+    height: 40px;
+    width: 40px;
+    border: 2px solid gray;
+    margin: 10px;
+    padding: 10px;
+    font-size: 35px;
+    text-align: center;
+}
+
+
