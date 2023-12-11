@@ -16,14 +16,14 @@
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-    <h1>Guess today's word!</h1>
-    <p id="userMessage">You have 6 attempts</p>
+    <h1 id="header">Guess today's word!</h1>
+    <p id="message">You have 6 attempts</p>
     <form id="puzzle-container">
         <label>Enter your word:
             <input type="text" id="inputWord">
         </label>
     </form>
-    <div class="result cont" id="result-div">
+    <div class="result-container" id="result-div">
         <table>
             <tr id="row6"></tr>
             <tr id="row5"></tr>
@@ -34,6 +34,9 @@
         </table>
         <p id="correct">You have guessed the correct word!</p>
         <p id="incorrect">Incorrect!</p>
+    </div>
+    <div id="alphabet-list">
+
     </div>
         <script src="wordle.js" type="module" async defer></script>
     </body>

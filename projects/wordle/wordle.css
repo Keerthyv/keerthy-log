@@ -1,5 +1,24 @@
 body {
 }
+#header {
+    margin: 100px 100px 0 100px;
+    text-align: center;
+}
+
+#message {
+    font-size: 25px;   
+    margin-left: 260px; 
+}
+
+#puzzle-container {
+    font-size: 25px;   
+    margin-left: 290px; 
+}
+
+#result-div {
+    margin-left: 300px;
+    margin-top: 50px;
+}
 
 
 
