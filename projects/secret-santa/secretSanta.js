@@ -70,7 +70,7 @@ function saveFormData(event) {
   var personAddress = address.value;
 
   namesArray.push(personName);
-  createNewPerson(personName, personEmail, personGift, personAddress);
+  createNewPerson(personName, personEmail, personGift, personAddress, "false", "false");
   if (namesArray.length === len - 1) {
     savePerson.style.display = "none";
     submitPersons.style.display = "inline";
@@ -87,11 +87,11 @@ function matchSecretSantas(event) {
 }
 
 
-function createNewPerson(personName, personEmail, personGift, personAddress) {
+function createNewPerson(personName, personEmail, personGift, personAddress, isGiftGiver, isGiftTaker) {
   personArray.push(
-    new Person(personName, personEmail, personGift, personAddress)
+    new Person(personName, personEmail, personGift, personAddress, isGiftGiver, isGiftTaker)
   );
-  console.log("The array of objects person: ");
+  console.log("The array of objects person, just created: ");
   console.log(personArray);
 }
 
@@ -107,23 +107,12 @@ function disableFormElements(toDisabled) {
   }
 }
 
-function matchNames() {
-    for (var i = 0; i < personArray.length; i++ ) {
-        //randomGiver = pickRandomGiver();
-        randomTaker = pickRandomTaker();
-        if (!(personArray[i].isGiftGiver)) {
-            if (!(personArray[randomTaker].isGiftTaker)) {
-                matchedNames.push(new MatchedPair(personArray[i].name, personArray[randomTaker].name));
-                personArray[randomTaker].isGiftTaker = "true";
-                personArray[i].isGiftGiver = "true";
-            }
-        }
-    }
-}
 
-
-function pickRandomTaker() {
+function pickRandomTaker(i) {
     var randomIndex = Math.floor(Math.random() * Number(groupLength));
+    if (randomIndex === i) {
+
+    }
     console.log("Taker: " + randomIndex);
     if (!(personArray[randomIndex].isGiftTaker)) {
         return randomIndex;
@@ -144,6 +133,22 @@ function pickRandomGiver() {
     pickRandomGiver();
     }
     else console.log("All names were matched!");
+}
+
+function matchNames() {
+    for (var i = 0, j = personArray.length - 1; i < personArray.length, j >= 0; i++, j--) {
+        //randomGiver = pickRandomGiver();
+        //var randomTaker = pickRandomTaker(i);
+        console.log("j Inside matchNames: " + j);
+        console.log(personArray[j]);
+        if (!(personArray[i].isGiftGiver)) {
+            if (!(personArray[j].isGiftTaker)) {
+                matchedNames.push(new MatchedPair(personArray[i].name, personArray[j].name));
+                personArray[j].isGiftTaker = "true";
+                personArray[i].isGiftGiver = "true";
+            }
+        }
+    }
 }
 
 function displayNames() {
