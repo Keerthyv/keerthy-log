@@ -4,3 +4,4 @@ This is a log of learning, my experiments with HTML, CSS and Javascript. Include
 - [Simple Quiz](simple-quiz/index.html)
 - [Wordle](wordle/index.html)
 - [Secret Santa App](secret-santa/index.html)
+- [Tic-tac-toe](tic-tac-toe/public/index.html)
