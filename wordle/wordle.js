@@ -50,6 +50,7 @@ function validateWord(userInputWord) {
     userMessage.innerHTML = "Please enter a valid five-letter word.";
   } else {
     console.log(userInputWord + " is a valid word");
+    userMessage.innerHTML = "";
     displayClues(userInputWord, counter);
     counter--;
     attempt++;
@@ -79,7 +80,7 @@ function displayClues(userInputWord, counter) {
     }
   }
   if (word === wordleWord) {
-    userMessage.innerHTML = `You have guessed the word on attempt ${attempt}`;
+    userMessage.innerHTML = `Congratulations! You guessed the word on attempt ${attempt}`;
     inputField.disabled = true;
   }
 }
