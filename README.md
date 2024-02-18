@@ -3,7 +3,7 @@ This is a log of learning, my experiments with HTML, CSS and Javascript. Include
 ----------------------------------------------------------------
 [Homepage](index.html)
 ----------------------------------------------------------------
-Here is the list of apps / websites that made my journey fun and exciting.
+Here is the list of apps / websites I enjoyed making.
 
 - [Todo App](todo-app/index.html)
 - [Simple Quiz](simple-quiz/index.html)
