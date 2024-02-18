@@ -1,4 +1,6 @@
 body {
+    width: 700px;
+    border: 2px solid green;
 }
 #header {
     margin: 100px 100px 0 100px;
@@ -7,16 +9,17 @@ body {
 
 #message {
     font-size: 25px;   
-    margin-left: 260px; 
+    margin-left: 190px; 
 }
 
 #puzzle-container {
     font-size: 25px;   
-    margin-left: 290px; 
+    margin-left: 200px; 
+    margin-bottom: 20px;
 }
 
 #result-div {
-    margin-left: 300px;
+    margin-left: 200px;
     margin-top: 50px;
     height: 450px;
 }
@@ -54,5 +57,4 @@ td {
     font-size: 35px;
     text-align: center;
 }
-
 
