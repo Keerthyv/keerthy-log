@@ -3,10 +3,10 @@ This is a log of learning, my experiments with HTML, CSS and Javascript. Include
 ----------------------------------------------------------------
 [Homepage](index.html)
 ----------------------------------------------------------------
-Here is the list of apps / websites I enjoyed making.
+Here is the list of apps , websites I enjoyed making.
 
 - [Todo App](todo-app/index.html)
 - [Simple Quiz](simple-quiz/index.html)
 - [Wordle](wordle/index.html)
 - [Secret Santa App](secret-santa/index.html)
-- [Tic-tac-toe](tic-tac-toe/public/index.html)
+- [Tic-tac-toe](tic-tac-toe/public/index.html) --> in progress
