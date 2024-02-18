@@ -80,7 +80,7 @@ function displayClues(userInputWord, counter) {
     }
   }
   if (word === wordleWord) {
-    userMessage.innerHTML = `Congratulations! You guessed the word on attempt ${attempt}`;
+    userMessage.innerHTML = `Hurray! You guessed the word on attempt ${attempt}`;
     inputField.disabled = true;
   }
 }
